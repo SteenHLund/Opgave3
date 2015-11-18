@@ -1,0 +1,37 @@
+package Opgave2;
+
+import java.awt.Color;
+import java.awt.Point;
+
+public class Beech extends Tree {
+	
+	Color red = Color.RED;
+	
+	public Beech(Point position, double size) {
+		super(position, size);
+	}
+
+	@Override
+	public Color getColor() {
+		return red;
+	}
+
+	@Override
+	public Point getPosition() {
+		return position;
+	}
+
+	@Override
+	public double getSize() {
+		return size;
+	}
+
+	@Override
+	public void grow() {
+		size+=0.9;
+		
+	}
+	
+	
+	
+}
