@@ -1,0 +1,38 @@
+
+import java.awt.Color;
+import java.awt.Point;
+
+public class Spruce extends Tree {
+	
+	Color green = Color.GREEN;
+	
+	public Spruce(Point position, double size) {
+		super(position, size);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public Color getColor() {
+		// TODO Auto-generated method stub
+		return green;
+	}
+
+	@Override
+	public Point getPosition() {
+		// TODO Auto-generated method stub
+		return position;
+	}
+
+	@Override
+	public double getSize() {
+		// TODO Auto-generated method stub
+		return size;
+	}
+
+	@Override
+	public void grow() {
+		size+=0.1;
+		
+	}
+
+}
