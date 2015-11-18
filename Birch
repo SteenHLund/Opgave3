@@ -1,0 +1,35 @@
+package Opgave2;
+
+import java.awt.Color;
+import java.awt.Point;
+
+public class Birch extends Tree {
+	
+	Color blue = Color.BLUE;
+		
+	public Birch(Point position, double size) {
+		super(position, size);
+	}
+
+	@Override
+	public Color getColor() {
+		return blue;
+	}
+
+	@Override
+	public Point getPosition() {
+		return position;
+	}
+
+	@Override
+	public double getSize() {
+		return size;
+	}
+
+	@Override
+	public void grow() {
+		size+=0.5;
+		
+	}
+
+}
