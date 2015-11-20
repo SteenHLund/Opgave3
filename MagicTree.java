@@ -4,6 +4,7 @@ import java.awt.Point;
 public class MagicTree extends Tree {
 	
 	Color black = Color.BLACK;
+	private static int moved = 0;
 	
 	public MagicTree(Point position, double size) {
 		super(position, size);
@@ -36,11 +37,12 @@ public class MagicTree extends Tree {
 		
 		double moveCounter = Math.random();
 		
-		if(moveCounter<= .05){
-			counter = Math.random();
-			position.x = (int)(counter * 300);
-			counter = Math.random();
-			position.y = (int)(counter * 300);
+		ConstAndUtil temp = new ConstAndUtil();
+		
+		if(moveCounter<= .05 || moved == 20){
+			moved = 0;
+			position = temp.getLegalRandomPosition();
 		}
+		moved++;
 	}
 }
