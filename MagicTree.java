@@ -1,5 +1,3 @@
-package Opgave2;
-
 import java.awt.Color;
 import java.awt.Point;
 
@@ -28,16 +26,21 @@ public class MagicTree extends Tree {
 
 	@Override
 	public void grow() {
-		int counter = 0;
+		double counter = Math.random();
 		
-		if(counter >= 0) {
+		if(counter >= .1) {
 			size+=0.5;
+		} else if (size>2) {
+			size-=1.5;
 		}
 		
-		if(Math.random()== 20){
-			//move some where else
+		double moveCounter = Math.random();
+		
+		if(moveCounter<= .05){
+			counter = Math.random();
+			position.x = (int)(counter * 300);
+			counter = Math.random();
+			position.y = (int)(counter * 300);
 		}
-						
 	}
-
 }
